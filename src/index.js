@@ -1,12 +1,12 @@
 import boxGallery from './functionalJS/galItems'
 
-import {parentGalleryEl, currentIndex, onGalleryCreate } from "./functionalJS/gallItemsCreate"
+import {parentGalleryEl, onGalleryCreate } from "./functionalJS/gallItemsCreate"
 
 parentGalleryEl.insertAdjacentHTML('beforeend', onGalleryCreate(boxGallery));
 
-parentGalleryEl.addEventListener('click', onOpenModal);
+parentGalleryEl.addEventListener('click', modalOperate.onOpenModal);
 
-refs.backDrop.addEventListener('click', onCloseModal);
+modalOperate.refs.backDrop.addEventListener('click', modalOperate.onCloseModal);
 
 import modalOperate from './functionalJS/openModal'
 

@@ -1,9 +1,13 @@
+import boxGallery from './galItems'
+
 const refs = {
     bigPicture: document.querySelector('.lightbox__image'),
     backDrop: document.querySelector('.lightbox__overlay'),
     openModal: document.querySelector('.js-lightbox'),
     closeModalBtn: document.querySelector('[data-action="close-lightbox"]'),
 }
+
+let currentIndex;
 
 function onOpenModal(ev) {
     ev.preventDefault();
@@ -65,4 +69,4 @@ function onCloseModal() {
     refs.bigPicture.alt = '';
 }
 
-export default { refs, onOpenModal, moveImageLeft, moveImageRight, onPressHandler, onCloseModal };
+export default { refs, onOpenModal, moveImageLeft, moveImageRight, onPressHandler, onCloseModal, currentIndex };

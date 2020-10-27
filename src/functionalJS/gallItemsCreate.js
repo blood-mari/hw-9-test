@@ -2,8 +2,6 @@
 
 export const parentGalleryEl = document.querySelector('.js-gallery');
 
-export let currentIndex;
-
 export function onGalleryCreate(pictures) {
     return pictures.map(({original, preview, desc}, currentIndex) => {
       return  `
